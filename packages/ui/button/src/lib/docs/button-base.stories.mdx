@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+<Meta title="Docs/Button/Base" />
+
+```ts
+import { Button, ButtonStyles, ButtonSize, ButtonColor } from "@caenguidanos/ui-react-button";
+
+export const App: React.FunctionComponent = () => {
+   let props: ButtonProps = {
+      data: {
+         text: "Click me!",
+      },
+      styles: {
+         size: ButtonSize.Medium,
+         color: ButtonColor.Primary,
+      },
+   };
+
+   const handleOnClick = (ev) => {
+      console.log(ev);
+   };
+
+   return <Button {...props} onClick={handleOnClick} />;
+};
+```

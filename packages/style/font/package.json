@@ -1,0 +1,14 @@
+{
+   "name": "style-font",
+   "version": "0.0.1",
+   "files": [
+      "index.scss",
+      "src/lint/static/**/*",
+      "src/lib/font-lato.scss",
+      "src/lib/font-inter.scss",
+      "src/lib/font-fallback.scss"
+   ],
+   "scripts": {
+      "lint": "stylelint **/*.scss"
+   }
+}

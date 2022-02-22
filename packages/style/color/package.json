@@ -1,0 +1,10 @@
+{
+   "name": "style-color",
+   "version": "0.0.1",
+   "files": [
+      "index.scss"
+   ],
+   "scripts": {
+      "lint": "stylelint **/*.scss"
+   }
+}

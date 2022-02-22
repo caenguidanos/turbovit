@@ -1,0 +1,12 @@
+@import "style-color/index.scss";
+@import "style-font/index.scss";
+@import "style-preflight/index.scss";
+
+body {
+   margin: 0;
+   font-family: Inter, var(--font-sans);
+}
+
+code {
+   font-family: var(--font-mono);
+}

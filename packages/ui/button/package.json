@@ -1,0 +1,22 @@
+{
+   "name": "ui-button",
+   "version": "0.0.1",
+   "files": [
+      "dist"
+   ],
+   "main": "./dist/index.cjs.js",
+   "module": "./dist/index.es.js",
+   "types": "./dist/src/index.d.ts",
+   "exports": {
+      ".": {
+         "import": "./dist/index.es.js",
+         "require": "./dist/index.cjs.js"
+      }
+   },
+   "scripts": {
+      "build": "vite build"
+   },
+   "dependencies": {
+      "tsconfig": "*"
+   }
+}

@@ -1,0 +1,11 @@
+{
+   "extends": ["../../../.stylelintrc.base.json"],
+   "rules": {
+      "property-no-vendor-prefix": [
+         true,
+         {
+            "ignoreProperties": ["appearance", "tab-size", "text-size-adjust"]
+         }
+      ]
+   }
+}

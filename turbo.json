@@ -1,14 +1,24 @@
 {
-  "pipeline": {
-    "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
-    },
-    "lint": {
-      "outputs": []
-    },
-    "dev": {
-      "cache": false
-    }
-  }
+   "$schema": "https://turborepo.org/schema.json",
+   "pipeline": {
+      "build": {
+         "dependsOn": ["^build"],
+         "outputs": ["dist/**"]
+      },
+      "lint": {
+         "outputs": []
+      },
+      "dev": {
+         "dependsOn": ["^build"],
+         "cache": false
+      },
+      "app#dev": {
+         "dependsOn": ["style-color#lint", "style-font#lint", "style-preflight#lint"],
+         "cache": false
+      },
+      "ui-button#build": {
+         "dependsOn": ["style-color#lint", "style-font#lint", "style-preflight#lint"],
+         "outputs": ["dist/**"]
+      }
+   }
 }

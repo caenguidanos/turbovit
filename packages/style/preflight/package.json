@@ -1,0 +1,11 @@
+{
+   "name": "style-preflight",
+   "version": "0.0.1",
+   "files": [
+      "index.scss",
+      "src/lib/tailwind.scss"
+   ],
+   "scripts": {
+      "lint": "stylelint **/*.scss"
+   }
+}
