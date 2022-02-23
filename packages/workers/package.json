@@ -1,0 +1,8 @@
+{
+   "name": "workers",
+   "version": "*",
+   "files": [
+      "**/*.worker",
+      "tsconfig.json"
+   ]
+}
