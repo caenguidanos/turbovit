@@ -1,69 +1,63 @@
-import { useMemo } from "react";
+import { styled } from "stitches/stitches.config";
+
+import type * as Stitches from "@stitches/react";
 
 import "./ui-button-base.module.scss";
 
-export const Button: React.FunctionComponent<ButtonProps & JSX.IntrinsicElements["button"]> = ({
-   styles,
-   data,
-   ...rest
-}) => {
-   let value: string = useMemo(() => data.text.toUpperCase(), [data.text]);
+const StyledButton = styled("button", {
+   color: "white",
+   fontFamily: "Inter, var(--font-sans)",
+   variants: {
+      color: {
+         primary: {
+            backgroundColor: "$primary500",
+            "&:hover": {
+               backgroundColor: "$primary400",
+            },
+            "&:active": {
+               backgroundColor: "$primary600",
+            },
+         },
+         secondary: {
+            backgroundColor: "$secondary500",
+            "&:hover": {
+               backgroundColor: "$secondary400",
+            },
+            "&:active": {
+               backgroundColor: "$secondary600",
+            },
+         },
+         accent: {
+            backgroundColor: "$accent500",
+            "&:hover": {
+               backgroundColor: "$accent400",
+            },
+            "&:active": {
+               backgroundColor: "$accent600",
+            },
+         },
+      },
+      size: {
+         small: {
+            padding: "0.5rem 1rem",
+            fontSize: "small",
+         },
+         medium: {
+            padding: "1rem 1.5rem",
+            fontSize: "medium",
+         },
+         large: {
+            padding: "1.5rem 2rem",
+            fontSize: "large",
+         },
+      },
+   },
+});
 
-   let className: string = useMemo(() => {
-      let cl = new Array<string>(3);
-
-      cl.push(ButtonClassNames.Base);
-      cl.push(ButtonClassNames[styles.color]);
-      cl.push(ButtonClassNames[styles.size]);
-
-      return cl.join(String.fromCharCode(0x0020));
-   }, [styles.color, styles.size]);
-
-   return <button className="btn-p-5 btn-bg-primary" children={value} {...rest} />;
-};
-
-interface ComponentProps<ComponentStyle = string, ComponentData = unknown> {
-   styles: ComponentStyle;
-   data?: ComponentData;
-}
-
-// --------------------------------------------------------------------------
-export interface ButtonProps extends ComponentProps<ButtonStyles, ButtonData> {
-   styles: ButtonStyles;
-   data: {
-      text: string;
-   };
-}
-
-export interface ButtonData {
+export interface ButtonProps extends Stitches.VariantProps<typeof StyledButton> {
    text: string;
 }
 
-export interface ButtonStyles {
-   color: ButtonColor;
-   size: ButtonSize;
-}
-
-export enum ButtonColor {
-   Primary = "primary",
-   Secondary = "secondary",
-   Accent = "accent",
-}
-
-export enum ButtonSize {
-   Small = "sm",
-   Medium = "md",
-   Large = "lg",
-}
-
-export const ButtonClassNames = {
-   Base: "btn",
-   [ButtonColor.Primary]: "btn-primary",
-   [ButtonColor.Secondary]: "btn-secondary",
-   [ButtonColor.Accent]: "btn-accent",
-   [ButtonSize.Small]: "btn-sm",
-   [ButtonSize.Medium]: "btn-md",
-   [ButtonSize.Large]: "btn-lg",
+export const Button: React.FunctionComponent<ButtonProps> = ({ text, ...rest }) => {
+   return <StyledButton children={text} {...rest} />;
 };
-
-

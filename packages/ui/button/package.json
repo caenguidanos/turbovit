@@ -18,6 +18,7 @@
       "test": "vitest"
    },
    "dependencies": {
-      "tsconfig": "*"
+      "tsconfig": "*",
+      "stitches": "*"
    }
 }
