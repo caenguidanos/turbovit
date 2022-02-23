@@ -1,6 +1,9 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @import "style-color/index.scss";
 @import "style-font/index.scss";
-@import "style-preflight/index.scss";
 
 body {
    margin: 0;

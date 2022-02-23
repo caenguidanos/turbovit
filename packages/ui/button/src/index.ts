@@ -1,1 +1,3 @@
-export * from "./lib/core/base/ui-button-base";
+import "./global.scss"
+
+export * from "./lib/base/ui-button-base";

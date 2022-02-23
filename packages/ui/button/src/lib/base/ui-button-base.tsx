@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-import "./ui-button-base.scss";
+import "./ui-button-base.module.scss";
 
 export const Button: React.FunctionComponent<ButtonProps & JSX.IntrinsicElements["button"]> = ({
    styles,
@@ -19,7 +19,7 @@ export const Button: React.FunctionComponent<ButtonProps & JSX.IntrinsicElements
       return cl.join(String.fromCharCode(0x0020));
    }, [styles.color, styles.size]);
 
-   return <button className={className} children={value} {...rest} />;
+   return <button className="btn-p-5 btn-bg-primary" children={value} {...rest} />;
 };
 
 interface ComponentProps<ComponentStyle = string, ComponentData = unknown> {
@@ -66,30 +66,4 @@ export const ButtonClassNames = {
    [ButtonSize.Large]: "btn-lg",
 };
 
-export const buttonBaseArgsTypes = {
-   text: { type: "string", defaultValue: "Button", description: "Text content of the button" },
-   size: {
-      description: "Size of the button",
-      control: {
-         type: "select",
-         options: [ButtonSize.Small, ButtonSize.Medium, ButtonSize.Large],
-         labels: {
-            [ButtonSize.Small]: "Small",
-            [ButtonSize.Medium]: "Medium",
-            [ButtonSize.Large]: "Large",
-         },
-      },
-   },
-   color: {
-      description: "Color of the button",
-      control: {
-         type: "select",
-         options: [ButtonColor.Primary, ButtonColor.Secondary, ButtonColor.Accent],
-         labels: {
-            [ButtonColor.Primary]: "Primary",
-            [ButtonColor.Secondary]: "Secondary",
-            [ButtonColor.Accent]: "Accent",
-         },
-      },
-   },
-};
+

@@ -12,5 +12,6 @@
       "strict": true,
       "target": "ESNext",
       "useDefineForClassFields": true
-   }
+   },
+   "exclude": ["node_modules", "dist", "**/*.worker.ts"]
 }
