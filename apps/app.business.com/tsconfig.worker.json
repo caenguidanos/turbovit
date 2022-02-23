@@ -1,0 +1,8 @@
+{
+   "compilerOptions": {
+      "composite": true,
+      "moduleResolution": "node",
+      "lib": ["WebWorker", "Webworker.Iterable", "esnext"]
+   },
+   "include": ["**/*.worker.ts"]
+}
