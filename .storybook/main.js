@@ -4,7 +4,7 @@ const rs = (p) => path.resolve(process.cwd(), ...p);
 
 module.exports = {
    stories: ["../packages/ui/**/*.stories.mdx", "../packages/ui/**/*.stories.@(js|jsx|ts|tsx)"],
-   addons: ["@storybook/addon-essentials", "@storybook/addon-a11y"],
+   addons: ["@storybook/addon-essentials", "@storybook/addon-a11y", "@storybook/addon-storysource"],
    staticDirs: [
       {
          from: rs(["packages/style/font/src/lib/static"]),

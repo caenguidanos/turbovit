@@ -9,11 +9,7 @@
          "outputs": []
       },
       "dev": {
-         "dependsOn": ["^build"],
-         "cache": false
-      },
-      "app#dev": {
-         "dependsOn": ["style#lint"],
+         "dependsOn": ["^lint", "^build"],
          "cache": false
       }
    }

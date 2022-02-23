@@ -6,6 +6,8 @@
       "lint": "stylelint **/*.scss"
    },
    "files": [
-      "assets/**/*"
+      "assets",
+      "src",
+      "index.scss"
    ]
 }

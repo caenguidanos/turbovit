@@ -2,8 +2,7 @@
    "name": "workers",
    "version": "0.0.1",
    "files": [
-      "src",
-      "tsconfig.json"
+      "src"
    ],
    "exports": {
       "./example": "./src/lib/example.worker.ts"

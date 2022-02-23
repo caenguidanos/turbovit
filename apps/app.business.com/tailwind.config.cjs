@@ -1,7 +1,4 @@
 module.exports = {
    content: ["src/**/*.{ts,tsx}"],
-   theme: {
-      extend: {},
-   },
-   plugins: [],
+   presets: [require("style/src/lib/color/presets/tailwind.config.cjs")],
 };

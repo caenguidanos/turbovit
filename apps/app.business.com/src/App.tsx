@@ -9,6 +9,8 @@ export const App: React.FunctionComponent = () => {
 
    return (
       <div className="theme-light">
+         <h1 className="text-primary">Hi</h1>
+
          <Button {...props} />
       </div>
    );

@@ -1,3 +1,3 @@
-self.onmessage = async (ev) => {
+self.onmessage = async (ev: MessageEvent) => {
    console.log("Hi", ev.origin);
 };
