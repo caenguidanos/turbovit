@@ -1,0 +1,12 @@
+{
+   "extends": ["../../.stylelintrc.base.json"],
+   "rules": {
+      "value-keyword-case": [
+         "lower",
+         {
+            "ignoreProperties": ["font-family", "--font-sans", "--font-serif", "--font-mono"]
+         }
+      ],
+      "property-no-unknown": [true, { "ignoreProperties": ["font-named-instance"] }]
+   }
+}

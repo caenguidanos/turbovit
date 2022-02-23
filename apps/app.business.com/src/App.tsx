@@ -1,11 +1,10 @@
-import { Button, ButtonColor, ButtonProps, ButtonSize } from "ui-button";
+import { Button, ButtonProps } from "ui";
 
 export const App: React.FunctionComponent = () => {
    let props: ButtonProps = {
-      data: {
-         text: "Click me!",
-      },
-      styles: { size: ButtonSize.Medium, color: ButtonColor.Primary },
+      text: "Click me!",
+      color: "secondary",
+      size: "small",
    };
 
    return (

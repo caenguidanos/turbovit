@@ -1,7 +1,6 @@
 {
    "name": "tsconfig",
    "files": [
-      "react-vite.json",
-      "workers.json"
+      "react-vite.json"
    ]
 }

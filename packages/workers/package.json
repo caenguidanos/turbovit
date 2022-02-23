@@ -1,7 +1,11 @@
 {
    "name": "workers",
-   "version": "*",
+   "version": "0.0.1",
    "files": [
-      "**/*.worker"
-   ]
+      "src",
+      "tsconfig.json"
+   ],
+   "exports": {
+      "./example": "./src/lib/example.worker.ts"
+   }
 }

@@ -13,12 +13,8 @@
          "cache": false
       },
       "app#dev": {
-         "dependsOn": ["style-color#lint", "style-font#lint"],
+         "dependsOn": ["style#lint"],
          "cache": false
-      },
-      "ui-button#build": {
-         "dependsOn": ["style-color#lint", "style-font#lint"],
-         "outputs": ["dist/**"]
       }
    }
 }

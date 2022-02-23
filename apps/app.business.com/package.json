@@ -8,8 +8,9 @@
       "preview": "vite preview"
    },
    "dependencies": {
+      "style": "*",
       "tsconfig": "*",
-      "workers": "*",
-      "ui-button": "*"
+      "ui": "*",
+      "workers": "*"
    }
 }

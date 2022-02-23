@@ -1,0 +1,11 @@
+{
+   "name": "style",
+   "version": "0.0.1",
+   "main": "index.scss",
+   "scripts": {
+      "lint": "stylelint **/*.scss"
+   },
+   "files": [
+      "assets/**/*"
+   ]
+}

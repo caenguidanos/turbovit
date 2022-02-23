@@ -2,14 +2,4 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "style-color/index.scss";
-@import "style-font/index.scss";
-
-body {
-   margin: 0;
-   font-family: Inter, var(--font-sans);
-}
-
-code {
-   font-family: var(--font-mono);
-}
+@import "style";
